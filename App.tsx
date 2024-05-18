@@ -5,7 +5,7 @@
  * @format
  */
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -31,10 +31,13 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import md5 from "md5"
+import {getMLKitLangCode, setMLKitLangCode} from '@gzqyl/react-native-userdefault'
 
 function App(): React.JSX.Element {
 
   const [msg,setMsg] = useState<string>("")
+
+  const [langCode,setlangCode] = useState<string>("")
 
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -70,10 +73,29 @@ function App(): React.JSX.Element {
     }).start();
 
   };
+
+  const getLang = async () =>{
+
+      const code = await getMLKitLangCode()
+
+      setlangCode(code)
+
+  }
+
+  useEffect(()=>{
+
+    
+    getLang()
+
+  },[])
+  
   
 
-  const openBaidu=()=>{
-    Linking.openURL("https://www.baidu.com")
+  const openBaidu= async ()=>{
+    //Linking.openURL("https://www.baidu.com")
+
+    await setMLKitLangCode("test lang code")
+
   }
 
   const backgroundStyle = {
@@ -88,7 +110,7 @@ function App(): React.JSX.Element {
 
         <Text style={{color: isDarkMode ? 'white': 'red'}}>Dark Mode</Text>
         <View style={styles.boxStyle}>
-          <Text>Hello World</Text>
+          <Text>Hello {langCode}</Text>
           <Text> {md5("app")}</Text>
         </View>
         <Image source={{uri: 'https://reactjs.org/logo-og.png'}} style={{width: 40, height: 40}} />

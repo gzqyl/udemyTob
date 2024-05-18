@@ -1203,6 +1203,11 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.57.0.tgz"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@gzqyl/react-native-userdefault@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@gzqyl/react-native-userdefault/-/react-native-userdefault-2.1.2.tgz#df1b20aa6abc57dce13d93f728315827299d59dd"
+  integrity sha512-j3hLkP/u+HuGFWbUJLvsqDzbh59APW3h/g09gRpttHFzjs8YmrfTrx87A4WL95FOX4JnkCnnpf23aNSm6ol2Hg==
+
 "@hapi/hoek@^9.0.0", "@hapi/hoek@^9.3.0":
   version "9.3.0"
   resolved "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.3.0.tgz"

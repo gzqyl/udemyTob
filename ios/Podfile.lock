@@ -1125,6 +1125,8 @@ PODS:
     - RCT-Folly (= 2024.01.01.00)
     - React-debug
     - React-jsi (= 0.74.1)
+  - react_native_userdefault (2.1.2):
+    - React-Core
   - ReactCommon (0.74.1):
     - ReactCommon/turbomodule (= 0.74.1)
   - ReactCommon/turbomodule (0.74.1):
@@ -1222,6 +1224,7 @@ DEPENDENCIES:
   - React-RuntimeHermes (from `../node_modules/react-native/ReactCommon/react/runtime`)
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
+  - "react_native_userdefault (from `../node_modules/@gzqyl/react-native-userdefault`)"
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1335,6 +1338,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler"
   React-utils:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
+  react_native_userdefault:
+    :path: "../node_modules/@gzqyl/react-native-userdefault"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   Yoga:
@@ -1393,6 +1398,7 @@ SPEC CHECKSUMS:
   React-RuntimeHermes: 44c628568ce8feedc3acfbd48fc07b7f0f6d2731
   React-runtimescheduler: e2152ed146b6a35c07386fc2ac4827b27e6aad12
   React-utils: 3285151c9d1e3a28a9586571fc81d521678c196d
+  react_native_userdefault: d55e950b37777183debd3ee7b47589ebc1653e45
   ReactCommon: f42444e384d82ab89184aed5d6f3142748b54768
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: b9a182ab00cf25926e7f79657d08c5d23c2d03b0
