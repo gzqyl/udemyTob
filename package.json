@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "md5": "^2.3.0",
     "react": "18.2.0",
     "react-native": "0.74.1"
   },
@@ -21,6 +22,7 @@
     "@react-native/eslint-config": "0.74.83",
     "@react-native/metro-config": "0.74.83",
     "@react-native/typescript-config": "0.74.83",
+    "@types/md5": "^2.3.5",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
