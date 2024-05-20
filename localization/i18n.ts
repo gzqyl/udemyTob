@@ -1,5 +1,5 @@
 import i18n from 'i18next';
-import { en, zh } from "./translations";
+import { en, zh, zh_hk } from "./translations";
 import { initReactI18next } from 'react-i18next';
 
 const resources = {
@@ -9,12 +9,17 @@ const resources = {
     zh: {
         translation: zh
     },
+    zh_hk: {
+        translation: zh_hk
+    },
 };
 
 i18n.use(initReactI18next).use({
     type: 'languageDetector',
     init: () => {},
     /** Must return detected language */
+
+    //Expo Localization
     detect: () => {
         return "en";
     }

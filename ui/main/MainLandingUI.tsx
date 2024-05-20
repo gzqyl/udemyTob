@@ -55,6 +55,7 @@ function MainLandingUI({navigation}: {navigation: any}): JSX.Element {
         <Text>{testMsg.length > 0 ? testMsg[0].text : "Wait Api"}</Text>
         <DraggableFlatList
           data={data}
+          onDragEnd={({data})=>updateData(data)}
           renderItem={({ item, getIndex, drag, isActive }:RenderItemParams<MainItemType> ) => (<>
             <ShadowDecorator>
               <ScaleDecorator>
