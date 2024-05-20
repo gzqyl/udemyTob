@@ -12,6 +12,8 @@ function MainItemUI({ item, drag, isActive, navigation }: RenderItemParams<MainI
     const styles = MainStyle()
     const { t } = useTranslation()
 
+    const testState = useState<string>("child component")
+
     const navTo = ()=>{
         if(item.route){
             navigation.navigate(item.route)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useCallback } from "react";
+import React, { useEffect, useState, useContext, useCallback, forwardRef } from "react";
 import { View, StatusBar, StyleSheet, FlatList, Text } from "react-native";
 import DraggableFlatList, {
   ShadowDecorator,
@@ -12,10 +12,15 @@ import { type MainItemType } from "../../structdata/MainStruct";
 import MainItemsData from "../../storage/MainItemsData";
 import Config from "../../utils/config";
 import MainStyle from "../../styles/main/mainstyle";
+import { useAppSelector, useAppDispatch } from "../../redux/hooks";
+import { testAddAsync } from "../../redux/reducer/testReducer";
 
 function MainLandingUI({navigation}: {navigation: any}): JSX.Element {
 
   const [data, setData] = useState<MainItemType[]>([]);
+
+  const testMsg = useAppSelector(state=> state.test)
+  const testDispatch = useAppDispatch()
 
   const conf = useContext(Config.context)
   const styles = MainStyle()
@@ -30,6 +35,14 @@ function MainLandingUI({navigation}: {navigation: any}): JSX.Element {
       })()
   },[])
 
+  useEffect(()=>{
+      testDispatch(testAddAsync({
+        id: 0,
+        text: "from server",
+        completed: true
+      }))
+  },[])
+
   const updateData = async (data: MainItemType[])=>{
 
     setData(data)
@@ -39,6 +52,7 @@ function MainLandingUI({navigation}: {navigation: any}): JSX.Element {
 
   return (
       <>
+        <Text>{testMsg.length > 0 ? testMsg[0].text : "Wait Api"}</Text>
         <DraggableFlatList
           data={data}
           renderItem={({ item, getIndex, drag, isActive }:RenderItemParams<MainItemType> ) => (<>

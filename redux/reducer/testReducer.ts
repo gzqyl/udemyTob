@@ -22,6 +22,7 @@ const testSlice = createSlice({
 
 export const { testAdded, testToggled } = testSlice.actions
 
+//api request
 function waitFn(payload: {id: number, text: string, completed: boolean}): Promise<{id: number, text: string, completed: boolean}>{
 
     return new Promise((resolve,reject)=>{
