@@ -16,7 +16,7 @@
 
 可以在这里提交[PR](https://github.com/gzqyl/udemyTob/pulls)
 
-或者提交Issues
+或者提交[Issues](https://github.com/gzqyl/udemyTob/issues)
 
 # 关于讲师的实力
 
