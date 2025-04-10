@@ -2,7 +2,9 @@
 
 这是专为Udemy上的课程创建的RN项目，适合RN新手结合课程讲解，快速全面掌握RN的必备技能
 
-# 课程地址 [React Native](https://www.udemy.com/course/rn-react-native/learn/lecture/46279771#overview)
+# 课程地址 
+
+[React Native](https://www.udemy.com/course/rn-react-native/learn/lecture/46279771)
 
 # 如何使用？
 
@@ -22,7 +24,7 @@
 
 # udemyTob
 
-for udemy React Native online course [React Native](https://www.udemy.com/course/rn-react-native/learn/lecture/46279771#overview)
+for udemy React Native online course [React Native](https://www.udemy.com/course/rn-react-native/learn/lecture/46279771)
 
 # How to use this course codes source?
 
